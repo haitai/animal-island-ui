@@ -89,7 +89,7 @@ export const prepareWeddingFontsForExport = (): Promise<string> => {
                                 display: 'swap',
                             });
                             await ff.load();
-                            (document.fonts as any).add(ff);
+                            document.fonts.add(ff);
                         } catch {
                             // FontFace 注册失败也不阻塞 data URL 生成
                         }
